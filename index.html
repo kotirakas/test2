@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.ico">
+<title>Dr. Shunkova – семейный врач и врач авиационной медицины</title>
+<meta name="description" content="Шункова Ксения Анатольевна – семейный врач и врач авиационной медицины. Индивидуальный подход, конфиденциальность, международные стандарты.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://shunkova.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://shunkova.com/">
+<meta property="og:title" content="Dr. Shunkova – семейный врач и врач авиационной медицины">
+<meta property="og:description" content="Шункова Ксения Анатольевна – семейный врач и врач авиационной медицины. Индивидуальный подход, конфиденциальность, международные стандарты.">
+<meta property="og:image" content="https://shunkova.com/photo-3.jpg">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dr. Shunkova – семейный врач и врач авиационной медицины">
+<meta name="twitter:description" content="Шункова Ксения Анатольевна – семейный врач и врач авиационной медицины.">
+<meta name="twitter:image" content="https://shunkova.com/photo-3.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root{
+    --paper: #dde1e6;
+    --paper-alt: #f2ecdd;
+    --card: #f7f5f0;
+    --navy: #1c2c40;
+    --navy-soft: #3d5066;
+    --ink-mute: #5c5752;
+    --footer-text: #94a8b5;
+    --line: #e6ddc9;
+    --line-strong: #d6c9a8;
+    --gold: #9a7435;
+    --gold-soft: #efe2c4;
+    --gold-deep: #7a5c27;
+    --max: 1440px;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; scroll-padding-top:84px; }
+  @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
+  body{
+    background:var(--paper);
+    color:var(--navy);
+    font-family:'Inter', sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{ font-family:'Playfair Display', serif; font-weight:600; letter-spacing:-0.01em; color:var(--navy); }
+  a{ color:inherit; }
+  .wrap{ max-width:var(--max); margin:0 auto; padding:0 32px; }
+  img{ display:block; max-width:100%; }
+
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:12px; letter-spacing:0.14em; text-transform:uppercase; font-weight:600;
+    color:var(--gold-deep);
+  }
+  .eyebrow-pulse{ width:26px; height:12px; flex-shrink:0; }
+  .eyebrow-pulse path{ fill:none; stroke:var(--gold); stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky; top:0; z-index:60;
+    background:rgba(250,247,241,0.9); backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{ display:flex; align-items:center; justify-content:space-between; padding:16px 32px; max-width:var(--max); margin:0 auto; }
+  .brand{ display:flex; align-items:center; gap:12px; }
+  .brand-mark{ width:38px; height:38px; flex-shrink:0; }
+  .brand-text .name{ font-family:'Playfair Display', serif; font-size:18px; font-weight:600; line-height:1.15; }
+  .brand-text .sub{ font-size:9.5px; letter-spacing:0.11em; text-transform:uppercase; color:var(--ink-mute); font-weight:600; margin-top:2px; }
+  .nav-links{ display:flex; gap:30px; font-size:14.5px; color:var(--navy-soft); font-weight:500; }
+  .nav-links a{ text-decoration:none; position:relative; padding:2px 0; }
+  .nav-links a::after{ content:""; position:absolute; left:0; right:0; bottom:-4px; height:1.5px; background:var(--gold); transform:scaleX(0); transition:transform .2s ease; }
+  .nav-links a:hover::after{ transform:scaleX(1); }
+  .nav-phone{ display:inline-flex; align-items:center; gap:8px; font-size:14px; font-weight:600; color:var(--navy); text-decoration:none; padding:10px 18px; border:1px solid var(--line-strong); border-radius:6px; transition:border-color .2s, color .2s; }
+  .nav-phone:hover{ border-color:var(--gold); color:var(--gold-deep); }
+  .nav-phone svg{ width:15px; height:15px; color:var(--gold); }
+
+  .btn{
+    font-family:'Inter', sans-serif; font-weight:600; font-size:14px;
+    border:none; cursor:pointer; padding:12px 22px; border-radius:6px;
+    display:inline-flex; align-items:center; gap:8px;
+    transition:transform .12s ease, background .15s ease, border-color .15s ease;
+    text-decoration:none;
+  }
+  .btn:active{ transform:scale(0.97); }
+  .btn-primary{ background:var(--gold); color:#fff; }
+  .btn-primary:hover{ background:#b8912e; }
+
+  /* ---------- hero ---------- */
+  .hero{ padding:100px 0 60px; background:url('fon-test.png') center 20%/cover no-repeat; position:relative; overflow:hidden; }
+  .hero::before{ content:""; position:absolute; inset:0; background:rgba(250,247,241,0.15); pointer-events:none; }
+  .hero-grid{ display:grid; grid-template-columns:1fr 1.05fr; gap:56px; align-items:center; }
+  .hero-copy{ padding-left:150px; }
+  .hero-copy h1{ font-size:46px; line-height:1.16; margin:20px 0 20px; color:#fff; }
+  .hero-copy p.lead{ font-size:17px; color:rgba(255,255,255,0.85); max-width:480px; margin-bottom:30px; }
+  .hero-cta{ display:flex; gap:12px; flex-wrap:wrap; margin-bottom:40px; }
+
+  .ecg-divider{ width:100%; height:56px; display:block; margin-bottom:8px; }
+  .ecg-divider path{ fill:none; stroke:var(--gold); stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+  .ecg-path{ stroke-dasharray:1400; stroke-dashoffset:1400; animation:draw 2.1s ease forwards .3s; }
+  @keyframes draw{ to{ stroke-dashoffset:0; } }
+  @media (prefers-reduced-motion: reduce){ .ecg-path{ animation:none; stroke-dashoffset:0; } }
+
+  .trust-row{ display:flex; gap:28px; flex-wrap:wrap; font-size:13.5px; color:rgba(255,255,255,0.8); }
+  .trust-row span{ display:flex; align-items:center; gap:8px; }
+  .trust-row svg{ width:16px; height:16px; color:var(--gold); flex-shrink:0; }
+
+  /* ---------- section shell ---------- */
+  section{ padding:88px 0; border-bottom:1px solid var(--line); }
+  .section-head{ max-width:800px; margin-bottom:44px; }
+  .section-head .eyebrow{ margin-bottom:14px; }
+  .section-head h2{ font-size:32px; margin-bottom:12px; }
+  .section-head p{ color:var(--navy-soft); font-size:15.5px; }
+
+  /* ---------- services ---------- */
+  .services-grid{ display:grid; grid-template-columns:repeat(4, 1fr); gap:18px; }
+  .service-card{
+    background:var(--paper-alt); border:1px solid var(--line); border-radius:12px;
+    padding:28px 24px; transition:transform .15s ease, border-color .15s ease;
+  }
+  .service-card:hover{ transform:translateY(-3px); border-color:var(--line-strong); }
+  .service-card .icon{ font-size:32px; color:var(--gold); margin-bottom:16px; display:block; }
+  .service-card .price-label{ font-size:13px; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:var(--gold-deep); margin-bottom:8px; }
+  .service-card .price{ font-family:'Playfair Display', serif; font-size:28px; font-weight:600; color:var(--navy); margin-bottom:16px; }
+  .service-card h3{ font-size:17px; margin-bottom:8px; }
+  .service-card p{ font-size:13.5px; color:var(--navy-soft); margin-bottom:14px; }
+  .service-card .more{ font-size:13px; font-weight:600; color:var(--gold-deep); text-decoration:none; }
+
+  /* ---------- about ---------- */
+  .about-grid{ display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+  .about-photo-wrap{ order:2; }
+  .about-copy{ order:1; }
+  .about-copy p{ color:var(--navy-soft); font-size:15.5px; margin-bottom:16px; max-width:480px; }
+  .about-photo-wrap{ position:relative; }
+  .about-photo-img{ width:98%; max-width:448px; height:auto; display:block; border-radius:14px; margin:0 auto; }
+  .about-photo-img.about-photo-mobile{ display:none; }
+
+  /* ---------- section shell ---------- */
+  section{ padding:88px 0; border-bottom:1px solid var(--line); }
+  .section-head{ max-width:800px; margin-bottom:44px; }
+  .section-head .eyebrow{ margin-bottom:14px; }
+  .section-head h2{ font-size:32px; margin-bottom:12px; }
+  .section-head p{ color:var(--navy-soft); font-size:15.5px; }
+
+  /* ---------- services ---------- */
+  .services-grid{ display:grid; grid-template-columns:repeat(4, 1fr); gap:18px; }
+  .service-card{
+    background:var(--paper-alt); border:1px solid var(--line); border-radius:12px;
+    padding:28px 24px; transition:transform .15s ease, border-color .15s ease;
+  }
+  .service-card:hover{ transform:translateY(-3px); border-color:var(--line-strong); }
+  .service-card .icon{ font-size:32px; color:var(--gold); margin-bottom:16px; display:block; }
+  .service-card .price-label{ font-size:13px; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:var(--gold-deep); margin-bottom:8px; }
+  .service-card .price{ font-family:'Playfair Display', serif; font-size:28px; font-weight:600; color:var(--navy); margin-bottom:16px; }
+  .service-card h3{ font-size:17px; margin-bottom:8px; }
+  .service-card p{ font-size:13.5px; color:var(--navy-soft); margin-bottom:14px; }
+  .service-card .more{ font-size:13px; font-weight:600; color:var(--gold-deep); text-decoration:none; }
+
+  /* ---------- about ---------- */
+  .about-grid{ display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+  .about-photo-wrap{ order:2; }
+  .about-copy{ order:1; }
+  .about-copy p{ color:var(--navy-soft); font-size:15.5px; margin-bottom:16px; max-width:480px; }
+  .about-photo-wrap{ position:relative; }
+  .about-photo-img{ width:98%; max-width:448px; height:auto; display:block; border-radius:14px; margin:0 auto; }
+
+  /* ---------- approach ---------- */
+  .approach-layout{ display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:start; }
+  .approach-photo{ position:sticky; top:100px; }
+  .approach-photo img{ width:100%; height:auto; border-radius:14px; display:block; }
+  .approach-stack{ display:flex; flex-direction:column; gap:16px; }
+  .approach-step{ position:relative; padding:26px 22px; border:1px solid var(--line); border-radius:12px; background:var(--card); }
+  .approach-step .num{ font-family:'Playfair Display', serif; font-size:26px; color:var(--gold-soft); -webkit-text-stroke:1.3px var(--gold); display:block; margin-bottom:14px; }
+  .approach-step h4{ font-family:'Inter', sans-serif; font-size:15.5px; font-weight:600; margin-bottom:6px; }
+  .approach-step p{ font-size:13.5px; color:var(--navy-soft); }
+
+  /* ---------- testimonials ---------- */
+  .test-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
+  .test-card{ background:var(--paper-alt); border:1px solid var(--line); border-radius:12px; padding:26px 24px; }
+  .test-card .quote-mark{ font-family:'Playfair Display', serif; font-size:34px; color:var(--gold); line-height:1; margin-bottom:6px; }
+  .test-card p.pull{ font-family:'Playfair Display', serif; font-style:italic; font-weight:500; font-size:18px; line-height:1.45; color:var(--navy); margin-bottom:16px; }
+  .test-full{ max-height:0; overflow:hidden; transition:max-height .35s ease, margin .35s ease; margin-bottom:0; }
+  .test-full p.txt{ font-size:14px; color:var(--navy-soft); border-top:1px solid var(--line); padding-top:14px; }
+  .test-card.open .test-full{ max-height:400px; margin-bottom:18px; }
+  .test-toggle{ background:none; border:none; padding:0; margin-bottom:18px; font-size:13px; font-weight:600; color:var(--gold-deep); cursor:pointer; display:inline-flex; align-items:center; gap:6px; }
+  .test-toggle:hover{ color:var(--navy); }
+  .test-toggle i{ font-size:11px; transition:transform .25s ease; }
+  .test-card.open .test-toggle i{ transform:rotate(180deg); }
+  .test-card .who{ display:flex; align-items:center; gap:10px; }
+
+  /* ---------- dossier ---------- */
+  .dossier{ display:grid; grid-template-columns:280px 1fr; gap:0; border:1px solid var(--line); border-radius:14px; background:var(--card); overflow:hidden; }
+  .dossier-nav{ background:var(--gold-soft); border-right:1px solid var(--line); padding:8px 0; }
+  .dossier-tab{ width:100%; text-align:left; padding:16px 24px; background:none; border:none; border-left:3px solid transparent; cursor:pointer; font-family:'Playfair Display', serif; font-size:15px; font-weight:600; color:var(--navy-soft); transition:all .2s ease; display:flex; align-items:center; gap:10px; }
+  .dossier-tab:hover{ background:var(--card); color:var(--navy); }
+  .dossier-tab.active{ background:var(--card); color:var(--navy); border-left-color:var(--gold); }
+  .dossier-tab .tab-icon{ width:20px; text-align:center; color:var(--gold); flex-shrink:0; }
+  .dossier-panel{ padding:32px; }
+  .dossier-panel h3{ font-size:22px; margin-bottom:20px; }
+  .dossier-panel p{ font-size:14.5px; color:var(--navy-soft); line-height:1.7; margin-bottom:10px; padding-left:16px; position:relative; }
+  .dossier-panel p::before{ content:""; position:absolute; left:0; top:10px; width:5px; height:5px; border-radius:50%; background:var(--gold); }
+  .dossier-panel ul.accordion-list{ list-style:none; padding:0; margin:10px 0 0; }
+  .dossier-panel ul.accordion-list li{ font-size:14px; color:var(--navy-soft); padding:10px 16px 10px 36px; position:relative; background:var(--paper-alt); border-radius:8px; margin-bottom:6px; line-height:1.5; border-left:3px solid var(--gold); }
+  .dossier-panel ul.accordion-list li::before{ content:""; position:absolute; left:14px; top:50%; transform:translateY(-50%); width:6px; height:6px; border-radius:50%; background:var(--gold); }
+  .dossier-panel .tab-body{ display:none; }
+  .dossier-panel .tab-body.active{ display:block; }
+
+  /* ---------- help ---------- */
+  .help-groups{ display:flex; flex-direction:column; gap:44px; }
+  .help-group-head{ display:flex; align-items:baseline; gap:16px; margin-bottom:20px; }
+  .help-group-head .num{ font-family:'Playfair Display', serif; font-size:22px; color:var(--gold-soft); -webkit-text-stroke:1.2px var(--gold); flex-shrink:0; }
+  .help-group-head h3{ font-size:18px; }
+  .help-group-head .hint{ font-size:13px; color:var(--ink-mute); margin-left:auto; }
+  .help-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
+  .help-card{ background:var(--paper-alt); border:1px solid var(--line); border-radius:12px; padding:28px 24px; transition:transform .15s ease, border-color .15s ease; }
+  .help-card:hover{ transform:translateY(-3px); border-color:var(--line-strong); }
+  .help-card .icon{ font-size:32px; color:var(--gold); margin-bottom:16px; display:block; }
+  .help-card h4{ font-size:16px; margin-bottom:8px; }
+  .help-card p{ font-size:13.5px; color:var(--navy-soft); line-height:1.6; }
+  .accordion-list{ list-style:none; margin-top:12px; padding:0; }
+  .accordion-list li{ font-size:14px; color:var(--navy-soft); padding:10px 16px 10px 36px; position:relative; background:var(--paper-alt); border-radius:8px; margin-bottom:6px; line-height:1.5; border-left:3px solid var(--gold); }
+  .accordion-list li::before{ content:""; position:absolute; left:14px; top:50%; transform:translateY(-50%); width:6px; height:6px; border-radius:50%; background:var(--gold); }
+  .test-avatar{ width:36px; height:36px; border-radius:50%; background:var(--gold-soft); color:var(--gold-deep); display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; font-family:'Playfair Display',serif; flex-shrink:0; }
+  .who .wr{ font-size:12px; color:var(--ink-mute); }
+
+  /* ---------- contact ---------- */
+  .contact-band{ background:var(--navy); border-bottom:none; padding:48px 0; }
+  .contact-inner{ display:grid; grid-template-columns:1fr 1fr; gap:24px; max-width:900px; margin:0 auto; }
+  .contact-card{ background:var(--gold-soft); padding:44px 40px; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:16px; border-radius:12px; text-align:center; }
+  .contact-card h3{ font-size:19px; }
+  .contact-card .contact-subtitle{ font-size:13px; color:var(--ink-mute); margin-bottom:2px; }
+  .contact-card .contact-name{ font-family:'Playfair Display', serif; font-size:18px; font-weight:600; color:var(--navy); margin-bottom:16px; }
+  .contact-line{ display:flex; align-items:center; gap:12px; font-size:14.5px; color:var(--navy); text-decoration:none; }
+  .contact-line svg{ width:18px; height:18px; color:var(--gold-deep); flex-shrink:0; }
+  .contact-social{ background:var(--gold-soft); border:1px solid var(--line); padding:44px 40px; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:20px; border-radius:12px; }
+  .contact-social h3{ font-size:19px; }
+  .social-links{ display:flex; gap:12px; }
+  .social-link{ width:40px; height:40px; border-radius:50%; border:1px solid var(--line-strong); display:flex; align-items:center; justify-content:center; font-size:16px; text-decoration:none; transition:all .2s; }
+  .social-link[aria-label="MAX"]{ color:#5B3FDB; }
+  .social-link[aria-label="Telegram"]{ color:#2AABEE; }
+  .social-link[aria-label="Instagram"]{ color:#E4405F; }
+  .social-link[aria-label="VK"]{ color:#4680C2; }
+  .social-link:hover{ opacity:0.8; }
+
+  /* ---------- modal ---------- */
+  .modal-overlay{ position:fixed; inset:0; background:rgba(0,0,0,.45); z-index:100; display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity .25s ease; }
+  .modal-overlay.open{ opacity:1; pointer-events:auto; }
+  .modal-card{ background:var(--card); border-radius:14px; padding:44px 40px; max-width:420px; width:90%; position:relative; display:flex; flex-direction:column; align-items:center; gap:14px; text-align:center; box-shadow:0 12px 40px rgba(0,0,0,.18); }
+  .modal-card h3{ font-size:19px; }
+  .modal-card .contact-subtitle{ font-size:13px; color:var(--ink-mute); margin-bottom:2px; }
+  .modal-card .contact-name{ font-family:'Playfair Display', serif; font-size:18px; font-weight:600; color:var(--navy); margin-bottom:12px; }
+  .modal-card .contact-line{ font-size:15px; color:var(--navy); text-decoration:none; display:flex; align-items:center; gap:10px; }
+  .modal-card .contact-line svg{ width:18px; height:18px; color:var(--gold-deep); }
+  .modal-close{ position:absolute; top:14px; right:18px; background:none; border:none; font-size:26px; cursor:pointer; color:var(--ink-mute); line-height:1; }
+
+  /* ---------- burger ---------- */
+  .burger{ display:none; background:none; border:none; cursor:pointer; padding:6px; z-index:70; }
+  .burger span{ display:block; width:22px; height:2px; background:var(--navy); margin:5px 0; transition:all .3s ease; border-radius:2px; }
+  .burger.active span:nth-child(1){ transform:rotate(45deg) translate(5px,5px); }
+  .burger.active span:nth-child(2){ opacity:0; }
+  .burger.active span:nth-child(3){ transform:rotate(-45deg) translate(5px,-5px); }
+  .mobile-menu{ display:none; position:absolute; top:100%; right:0; background:var(--card); border:1px solid var(--line); border-radius:0 0 12px 12px; box-shadow:0 8px 24px rgba(0,0,0,0.1); flex-direction:column; align-items:flex-start; gap:0; z-index:55; min-width:220px; }
+  .mobile-menu.open{ display:flex; }
+  .mobile-menu a{ font-family:'Inter', sans-serif; font-size:14px; font-weight:500; color:var(--navy); text-decoration:none; padding:12px 24px; width:100%; text-align:left; border-bottom:1px solid var(--line); transition:background .2s; }
+  .mobile-menu a:last-child{ border-bottom:none; }
+  .mobile-menu a:hover{ background:var(--paper-alt); color:var(--gold-deep); }
+
+  footer{ padding:24px 0; text-align:center; font-size:12.5px; color:var(--footer-text); background:var(--navy); }
+  .footer-quote{ font-family:'Playfair Display', serif; font-style:italic; font-size:14px; color:rgba(255,255,255,0.6); margin-bottom:12px; }
+  .footer-info{ font-size:12.5px; color:rgba(255,255,255,0.5); line-height:1.8; margin-bottom:12px; }
+  .footer-brand{ font-size:12.5px; color:rgba(255,255,255,0.4); }
+
+  /* ---------- reveal ---------- */
+  .reveal{ opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease; }
+  .reveal.in{ opacity:1; transform:translateY(0); }
+  @media (prefers-reduced-motion: reduce){ .reveal{ opacity:1; transform:none; transition:none; } }
+
+  @media (max-width: 980px){
+    .hero-grid, .about-grid{ grid-template-columns:1fr; }
+    .services-grid{ grid-template-columns:repeat(2,1fr); }
+    .help-grid{ grid-template-columns:repeat(2,1fr); }
+    .approach-layout{ grid-template-columns:1fr; }
+    .approach-photo{ position:static; }
+    .test-grid{ grid-template-columns:1fr; }
+    .nav-links{ display:none; }
+    .burger{ display:block; }
+    .nav .btn{ display:none; }
+    .nav-phone{ display:none; }
+    .hero-cta{ justify-content:center; }
+    .trust-row{ justify-content:center; }
+    .hero-copy{ text-align:center; }
+    .hero-copy p.lead{ margin-left:auto; margin-right:auto; }
+    .dossier{ grid-template-columns:1fr; }
+    .dossier-nav{ display:flex; overflow-x:auto; border-right:none; border-bottom:1px solid var(--line); padding:0; gap:0; background:var(--gold-soft); }
+    .dossier-tab{ border-left:none; border-bottom:3px solid transparent; white-space:nowrap; padding:14px 18px; font-size:13px; }
+    .dossier-tab.active{ border-bottom-color:var(--gold); border-left-color:transparent; }
+    .dossier-panel{ padding:24px 20px; }
+  }
+  @media (max-width: 560px){
+    .hero-copy h1{ font-size:28px; }
+    .hero-copy p.lead{ font-size:15px; }
+    .services-grid, .help-grid{ grid-template-columns:1fr; }
+    .contact-inner{ grid-template-columns:1fr; padding:0 20px; }
+    .contact-card{ padding:28px 24px; }
+    .contact-social{ padding:28px 24px; }
+    .wrap{ padding:0 20px; }
+    section{ padding:60px 0; }
+    .dossier-tab{ font-size:12px; padding:12px 14px; }
+    .dossier-panel{ padding:20px 16px; }
+    .dossier-panel h3{ font-size:18px; }
+    .help-group-head .hint{ display:none; }
+    .about-photo-wrap{ order:0; }
+    .about-copy{ order:0; }
+    .about-photo-img.about-photo-desktop{ display:none; }
+    .about-photo-img.about-photo-mobile{ display:block; }
+    .help-card, .service-card{ padding:22px 18px; }
+    .brand .sub{ display:none; }
+    .nav .btn{ display:none; }
+    .hero{ background-image:url('fon-test_mob.png'); background-position:center bottom; }
+    .hero-copy{ padding-left:0; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">
+      <svg class="brand-mark" viewBox="0 0 40 40" fill="none">
+        <path d="M20 30C11 24 6 18.5 6 13.2 6 9 9.2 6 13 6c2.6 0 4.9 1.4 6 3.6C20.1 7.4 22.4 6 25 6c3.8 0 7 3 7 7.2C32 18.5 27 24 20 30Z" stroke="#b3873f" stroke-width="1.6" stroke-linejoin="round"/>
+        <path d="M20 30v6M15 36h10" stroke="#b3873f" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      <div class="brand-text">
+        <div class="name">Dr. Shunkova</div>
+        <div class="sub">Семейный врач · Врач авиационной медицины</div>
+      </div>
+    </div>
+    <nav class="nav-links">
+      <a href="#about">Обо мне</a>
+      <a href="#help">Помощь</a>
+      <a href="#services">Услуги</a>
+      <a href="#approach">Подход</a>
+      <a href="#testimonials">Отзывы</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+    <span class="nav-phone">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1.1.4 2.2.7 3.2a2 2 0 0 1-.5 2.1L8 10.5a16 16 0 0 0 6 6l1.5-1.3a2 2 0 0 1 2.1-.5c1 .3 2.1.6 3.2.7a2 2 0 0 1 1.7 2Z"/></svg>
+      +7 999 218-28-09
+    </span>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about">Обо мне</a>
+    <a href="#help">Помощь</a>
+    <a href="#services">Услуги</a>
+    <a href="#approach">Подход</a>
+    <a href="#testimonials">Отзывы</a>
+    <a href="#contact">Контакты</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1>Шункова Ксения Анатольевна</h1>
+      <p class="lead">• Врач авиационной и космической медицины<br>• Врач общей практики (семейный врач)</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+          Записаться на консультацию
+        </a>
+      </div>
+      <svg class="ecg-divider" viewBox="0 0 1200 100" preserveAspectRatio="none" aria-hidden="true">
+        <path class="ecg-path" d="M0,70 L80,70 L100,45 L120,90 L140,55 L160,70 L260,70 C 420,70 500,45 640,30 C 780,15 950,10 1180,8"/>
+      </svg>
+      <div class="trust-row">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="8" r="2.4"/><path d="M15.5 14a4.8 4.8 0 0 1 5.5 5.6"/></svg> Индивидуальный подход</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg> Конфиденциальность</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 2.5 15.4 0 18M12 3c-2.5 2.6-2.5 15.4 0 18"/></svg> Опыт и международные стандарты</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="about-photo-wrap reveal">
+      <img src="photo-4.jpg" alt="Dr. Shunkova" class="about-photo-img about-photo-desktop">
+      <img src="photo_6.jpg" alt="Dr. Shunkova" class="about-photo-img about-photo-mobile">
+    </div>
+    <div class="about-copy reveal">
+      <span class="eyebrow"><svg class="eyebrow-pulse" viewBox="0 0 32 14" aria-hidden="true"><path d="M0 7 L7 7 L9.5 3 L12.5 11 L15 7 L32 7"/></svg>Обо мне</span>
+      <h2>Ваш персональный медицинский консультант</h2>
+      <p>С более чем 20-летним опытом в области медицинского сопровождения летного состава деловой авиации.</p>
+      <p>Я создаю персонализированные программы лечения, учитывая ваши индивидуальные потребности и образ жизни.</p>
+      <p>Мой приоритет – обеспечить вам максимальный комфорт и удобство на каждом этапе нашего сотрудничества.</p>
+      <p>Я использую передовые методы и технологии, основанные на последних достижениях медицины, чтобы гарантировать вам наилучшие результаты.</p>
+      <p><b>Моя цель:</b> Ваше здоровье и благополучие. Вместе мы сможем достичь гармонии и уверенности в завтрашнем дне.</p>
+      <p><b>Позвольте мне стать вашим надежным партнером на пути к здоровью и долголетию!</b></p>
+    </div>
+  </div>
+</section>
+
+<section id="details">
+  <div class="wrap">
+    <div class="dossier reveal">
+      <nav class="dossier-nav">
+        <button class="dossier-tab active" data-tab="tab-exp"><span class="tab-icon"><i class="fa-solid fa-briefcase"></i></span>Опыт</button>
+        <button class="dossier-tab" data-tab="tab-edu"><span class="tab-icon"><i class="fa-solid fa-graduation-cap"></i></span>Образование</button>
+        <button class="dossier-tab" data-tab="tab-qual"><span class="tab-icon"><i class="fa-solid fa-certificate"></i></span>Квалификация</button>
+        <button class="dossier-tab" data-tab="tab-expert"><span class="tab-icon"><i class="fa-solid fa-chalkboard-user"></i></span>Экспертная деятельность</button>
+      </nav>
+      <div class="dossier-panel">
+        <div class="tab-body active" id="tab-exp">
+          <h3>Опыт</h3>
+          <p>С 2001 года занимаюсь медицинским сопровождением летного состава деловой авиации и летчиков-испытателей.</p>
+          <p>Обеспечиваю комплексное медицинское сопровождение авиакомпаний, работающих в сфере VIP перевозок.</p>
+          <p>Осуществляю всестороннюю медицинскую помощь как семейный врач: от профилактики до лечения заболеваний.</p>
+          <p>Подбираю клиники и врачей для пациентов, а также организую реабилитационный отдых.</p>
+        </div>
+        <div class="tab-body" id="tab-edu">
+          <h3>Образование</h3>
+          <p>ФГБОУ ВС Северо-Западный государственный медицинский университет им. И.И.Мечникова МЗ РФ (Факультет медико-профилактическое дело)</p>
+          <p>ФГБОУ ВС Северо-Западный государственный медицинский университет им. И.И.Мечникова МЗ РФ (Общая врачебная практика (семейная медицина))</p>
+          <p>ЧОУВО Санкт-Петербургский медико-социальный институт (Организация здравоохранения и общественное здоровье)</p>
+          <p>ФГБОУ ДПО Российская медицинская академия непрерывного профессионального образования МЗ РФ (Авиационная и космическая медицина)</p>
+        </div>
+        <div class="tab-body" id="tab-qual">
+          <h3>Квалификация и профессиональное развитие</h3>
+          <p>Регулярно повышаю свою квалификацию.</p>
+          <p>Участвую в региональных и международных конференциях.</p>
+          <p>Являюсь членом профессиональных ассоциаций и деловых сообществ:</p>
+          <ul class="accordion-list">
+            <li>Ассоциация врачей авиационной медицины</li>
+            <li>Ассоциация семейных врачей</li>
+            <li>Участник программы «Врачи на борту»</li>
+          </ul>
+        </div>
+        <div class="tab-body" id="tab-expert">
+          <h3>Экспертная и преподавательская деятельность</h3>
+          <p>Эксперт в международном институте воздушного и космического права «Aerohelp».</p>
+          <p>Эксперт рабочей группы в сфере воздушного транспорта при подкомиссии по совершенствованию контрольной (надзорной) и разрешительной деятельности федеральных органов исполнительной власти при правительственной комиссии по проведению административной реформы.</p>
+          <p>Преподаватель курса «Оказание первой неотложной помощи на борту ВС» для членов летного и кабинного экипажей.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="help">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><svg class="eyebrow-pulse" viewBox="0 0 32 14" aria-hidden="true"><path d="M0 7 L7 7 L9.5 3 L12.5 11 L15 7 L32 7"/></svg>Помощь</span>
+      <h2>Чем я могу вам помочь?</h2>
+    </div>
+    <div class="help-groups">
+
+      <div class="help-group">
+        <div class="help-group-head reveal">
+          <span class="num">01</span>
+          <h3>Когда проблема беспокоит прямо сейчас</h3>
+          <span class="hint">Острое состояние, требующее скорого внимания</span>
+        </div>
+        <div class="help-grid">
+          <div class="help-card reveal">
+            <i class="fa-solid fa-heart-pulse icon"></i>
+            <h4>Острые заболевания</h4>
+            <p>Консультация по острому заболеванию, впервые возникшему, назначение анализов и обследований с дальнейшим назначением терапии.</p>
+          </div>
+          <div class="help-card reveal">
+            <i class="fa-solid fa-clipboard-check icon"></i>
+            <h4>Реабилитация после болезни</h4>
+            <p>Анализ состояния после затяжной болезни, назначение необходимых обследований, рекомендации и назначение реабилитации.</p>
+          </div>
+          <div class="help-card reveal">
+            <i class="fa-solid fa-stethoscope icon"></i>
+            <h4>Профзаболевания</h4>
+            <p>Консультация при возникновении профзаболевания: возможность дальнейшей работы, варианты реабилитации.</p>
+          </div>
+          <div class="help-card reveal">
+            <i class="fa-solid fa-house-medical icon"></i>
+            <h4>Выезд на дом / клиника</h4>
+            <p>Консультационный выезд на дом или приём в клинике.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="help-group">
+        <div class="help-group-head reveal">
+          <span class="num">02</span>
+          <h3>Экспертное мнение и справки</h3>
+          <span class="hint">Формальные заключения, допуски, второе мнение</span>
+        </div>
+        <div class="help-grid">
+          <div class="help-card reveal">
+            <i class="fa-solid fa-file-medical icon"></i>
+            <h4>Анализ документации</h4>
+            <p>Анализ вашей медицинской документации (в том числе «второе мнение») и получение рекомендаций.</p>
+          </div>
+          <div class="help-card reveal">
+            <i class="fa-solid fa-calendar-check icon"></i>
+            <h4>Запись на обследование</h4>
+            <p>Консультация при записи на обследование и, при необходимости, к узким специалистам.</p>
+          </div>
+          <div class="help-card reveal">
+            <i class="fa-solid fa-plane icon"></i>
+            <h4>Для пилотов</h4>
+            <p>Консультирование пилотов перед прохождением ВЛЭК.</p>
+          </div>
+          <div class="help-card reveal">
+            <i class="fa-solid fa-user-graduate icon"></i>
+            <h4>Для абитуриентов</h4>
+            <p>Консультация по состоянию здоровья абитуриента: возможность работы по специальности, прохождение медицинской комиссии при поступлении.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="help-group">
+        <div class="help-group-head reveal">
+          <span class="num">03</span>
+          <h3>Постоянное сопровождение</h3>
+          <span class="hint">Наблюдение вдолгую, для вас или всей семьи</span>
+        </div>
+        <div class="help-grid">
+          <div class="help-card reveal">
+            <i class="fa-solid fa-folder-open icon"></i>
+            <h4>Хронические пациенты</h4>
+            <p>Вы хронический (коморбидный) пациент. Анализ всей документации и выбор дальнейшей тактики лечения.</p>
+          </div>
+          <div class="help-card reveal">
+            <i class="fa-solid fa-leaf icon"></i>
+            <h4>Холистический подход</h4>
+            <p>Оценка состояния здоровья, назначение витаминов и БАД, при необходимости – направление к узким специалистам (психотерапевт, косметолог).</p>
+          </div>
+          <div class="help-card reveal">
+            <i class="fa-solid fa-user-nurse icon"></i>
+            <h4>Курация и сопровождение</h4>
+            <p>Курация (сопровождение) на месяц или год – для одного человека или всей семьи.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><svg class="eyebrow-pulse" viewBox="0 0 32 14" aria-hidden="true"><path d="M0 7 L7 7 L9.5 3 L12.5 11 L15 7 L32 7"/></svg>Услуги</span>
+      <h2>Стоимость услуг</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="price-label">Консультация А</div>
+        <div class="price">7 000 ₽</div>
+        <p>Базовая консультация с осмотром и рекомендациями.</p>
+        <a href="#contact" class="more">Записаться →</a>
+      </div>
+      <div class="service-card reveal">
+        <div class="price-label">Консультация В</div>
+        <div class="price">15 000 ₽</div>
+        <p>Расширенная консультация с назначением обследований.</p>
+        <a href="#contact" class="more">Записаться →</a>
+      </div>
+      <div class="service-card reveal">
+        <div class="price-label">Консультация С</div>
+        <div class="price">25 000 ₽</div>
+        <p>Комплексная консультация с глубоким анализом состояния.</p>
+        <a href="#contact" class="more">Записаться →</a>
+      </div>
+      <div class="service-card reveal">
+        <div class="price-label">Сопровождение</div>
+        <div class="price">По запросу</div>
+        <p>Сопровождение пациента или семьи в течение месяца/года.</p>
+        <a href="#contact" class="more">Записаться →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="approach">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><svg class="eyebrow-pulse" viewBox="0 0 32 14" aria-hidden="true"><path d="M0 7 L7 7 L9.5 3 L12.5 11 L15 7 L32 7"/></svg>Подход</span>
+      <h2>Как строится работа</h2>
+      <p>Прозрачный процесс на каждом этапе – от первого обращения до сопровождения после приёма.</p>
+    </div>
+    <div class="approach-layout">
+      <div class="approach-photo reveal"><img src="photo-5.jpg" alt="Процесс работы"></div>
+      <div class="approach-stack">
+        <div class="approach-step reveal"><span class="num">01</span><h4>Обращение</h4><p>Обсуждаем задачу, симптомы или цель визита – очно, на дому или дистанционно.</p></div>
+        <div class="approach-step reveal"><span class="num">02</span><h4>Осмотр и диагностика</h4><p>Провожу осмотр, при необходимости назначаю обследования и анализы.</p></div>
+        <div class="approach-step reveal"><span class="num">03</span><h4>Индивидуальный план</h4><p>Формирую понятный план лечения или наблюдения – без лишних процедур.</p></div>
+        <div class="approach-step reveal"><span class="num">04</span><h4>Сопровождение</h4><p>Остаюсь на связи и слежу за динамикой после приёма.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><svg class="eyebrow-pulse" viewBox="0 0 32 14" aria-hidden="true"><path d="M0 7 L7 7 L9.5 3 L12.5 11 L15 7 L32 7"/></svg>Отзывы</span>
+      <h2>Что говорят пациенты</h2>
+    </div>
+    <div class="test-grid">
+      <div class="test-card reveal">
+        <div class="quote-mark">"</div>
+        <p class="pull">Внимательное отношение и профессионализм на каждом этапе лечения.</p>
+        <button class="test-toggle" type="button">Читать целиком <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="test-full"><p class="txt">Хочу поблагодарить врача-терапевта Ксению Анатольевну Шункову за внимательное отношение и профессионализм. Я обратилась к ней с жалобами на непрекращающийся кашель, слабость, перепады настроения и сонливость, которые меня беспокоили уже долгое время. Ксения Анатольевна была внимательна к моему состоянию, назначила необходимые анализы, прописала эффективное лечение. В процессе доктор следила за моим состоянием и при необходимости корректировала лечение, была готова ответить на вопросы. Я очень благодарна врачу за помощь. Рекомендую Ксению Анатольевну особенно тем, кто нуждается в помощи грамотного терапевта.</p></div>
+        <div class="who"><div class="test-avatar">М.</div><div><div class="wr">Пациент</div></div></div>
+      </div>
+      <div class="test-card reveal">
+        <div class="quote-mark">"</div>
+        <p class="pull">Разговаривать с ней было легко. Сил и правда прибавилось.</p>
+        <button class="test-toggle" type="button">Читать целиком <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="test-full"><p class="txt">Я была на приеме у доктора Шунковой в клинике О-три. Моя проблема была, что я быстро уставала, мало сил, а у меня работа, связанная с множеством перелетов и нагрузок, как раз и в СПб я была в командировке. Доктор задала много вопросов, была внимательной, разговаривать с ней было легко. Назначила подробный список исследований, и смогла подобрать лечение, удивительно, но сил и правда прибавилось. Если буду еще в командировке, обязательно посещу Ксению Анатольевну.</p></div>
+        <div class="who"><div class="test-avatar">А.</div><div><div class="wr">Пациент клиники О-три</div></div></div>
+      </div>
+      <div class="test-card reveal">
+        <div class="quote-mark">"</div>
+        <p class="pull">Врач спокойно выслушала, расписала курс лечения и была на связи.</p>
+        <button class="test-toggle" type="button">Читать целиком <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="test-full"><p class="txt">Приехала в СПб в отпуск и разболелась. Думала обычное ОРВИ, но когда кашель не проходил и начал мешать спать, обратилась к врачу. Очень благодарна Ксении Анатольевне! Немного затянула с походом и пришла практически в панике. Врач спокойно выслушала, расписала курс лечения и была на связи. Долго сражались с вирусом, но удалось выздороветь без осложнений (и успеть погулять в отпуске). Однозначно рекомендую врача и безмерно благодарю, что нашла такого специалиста в свой самый жуткий ОРВИ.</p></div>
+        <div class="who"><div class="test-avatar">Е.</div><div><div class="wr">Пациент</div></div></div>
+      </div>
+      <div class="test-card reveal">
+        <div class="quote-mark">"</div>
+        <p class="pull">Очень грамотный, внимательный и неравнодушный доктор.</p>
+        <button class="test-toggle" type="button">Читать целиком <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="test-full"><p class="txt">Ксения Анатольевна очень грамотный, внимательный и неравнодушный доктор, который очень болеет за своих пациентов. Такие доктора сейчас редко встречаются! Благодаря Ксении Анатольене, ее грамотному лечению и заботе я выздоровела, и жизнь заиграла новыми красками. Хочу выразить огромную благодарность за ее неравнодушие и человечность! Спасибо!!!</p></div>
+        <div class="who"><div class="test-avatar">Е.</div><div><div class="wr">Пациент</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact-band">
+  <div class="contact-inner">
+    <div class="contact-card reveal">
+      <h3>Записаться на консультацию</h3>
+      <p class="contact-name"><span class="contact-subtitle">Координатор / Ассистент</span> Лейла</p>
+      <a href="tel:+79992182809" class="contact-line contact-phone-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1.1.4 2.2.7 3.2a2 2 0 0 1-.5 2.1L8 10.5a16 16 0 0 0 6 6l1.5-1.3a2 2 0 0 1 2.1-.5c1 .3 2.1.6 3.2.7a2 2 0 0 1 1.7 2Z"/></svg>
+        +7 999 218-28-09
+      </a>
+    </div>
+    <div class="contact-social reveal">
+      <h3>Присоединяйтесь</h3>
+      <div class="social-links">
+        <a href="https://max.ru/join/USHQKEiCpA0uQ6xGtd5D9S5E8fRFhSAOgI9uKurS60U" class="social-link" aria-label="MAX" target="_blank" rel="noopener"><svg viewBox="0 0 1000 1000" width="20" height="20"><defs><linearGradient id="b"><stop offset="0" stop-color="#00f"/><stop offset="1" stop-opacity="0"/></linearGradient><linearGradient id="a"><stop offset="0" stop-color="#4cf"/><stop offset=".662" stop-color="#53e"/><stop offset="1" stop-color="#93d"/></linearGradient><linearGradient id="c" x1="117.847" x2="1000" y1="760.536" y2="500" gradientUnits="userSpaceOnUse" href="#a"/><radialGradient id="d" cx="-87.392" cy="1166.116" r="500" fx="-87.392" fy="1166.116" gradientTransform="rotate(51.356 1551.478 559.3)scale(2.42703433 1)" gradientUnits="userSpaceOnUse" href="#b"/></defs><rect width="1000" height="1000" fill="url(#c)" ry="249.681"/><rect width="1000" height="1000" fill="url(#d)" ry="249.681"/><path fill="#fff" fill-rule="evenodd" d="M508.211 878.328c-75.007 0-109.864-10.95-170.453-54.75-38.325 49.275-159.686 87.783-164.979 21.9 0-49.456-10.95-91.248-23.36-136.873-14.782-56.21-31.572-118.807-31.572-209.508 0-216.626 177.754-379.597 388.357-379.597 210.785 0 375.947 171.001 375.947 381.604.707 207.346-166.595 376.118-373.94 377.224m3.103-571.585c-102.564-5.292-182.499 65.7-200.201 177.024-14.6 92.162 11.315 204.398 33.397 210.238 10.585 2.555 37.23-18.98 53.837-35.587a189.8 189.8 0 0 0 92.71 33.032c106.273 5.112 197.08-75.794 204.215-181.95 4.154-106.382-77.67-196.486-183.958-202.574Z" clip-rule="evenodd"/></svg></a>
+        <a href="https://t.me/shunkovadoc" class="social-link" aria-label="Telegram" target="_blank" rel="noopener"><i class="fa-brands fa-telegram"></i></a>
+        <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://vk.ru/dr.kssh" class="social-link" aria-label="VK" target="_blank" rel="noopener"><i class="fa-brands fa-vk"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-quote">«Здоровье – это свобода жить полной жизнью. Моя задача – помочь вам сохранить эту свободу.»</div>
+  <div class="footer-info">© 2026<br>ИНН 781307687628<br>shunkova.ksenia@gmail.com<br>+7 (921) 366-46-26</div>
+  <div class="footer-brand">Dr. Shunkova · семейная медицина · авиационная медицина</div>
+</footer>
+
+<div class="modal-overlay" id="consultModal">
+  <div class="modal-card">
+    <button class="modal-close" id="modalClose">&times;</button>
+    <h3>Записаться на консультацию</h3>
+    <p class="contact-name"><span class="contact-subtitle">Координатор / Ассистент</span> Лейла</p>
+    <a href="tel:+79992182809" class="contact-line">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1.1.4 2.2.7 3.2a2 2 0 0 1-.5 2.1L8 10.5a16 16 0 0 0 6 6l1.5-1.3a2 2 0 0 1 2.1-.5c1 .3 2.1.6 3.2.7a2 2 0 0 1 1.7 2Z"/></svg>
+      +7 999 218-28-09
+    </a>
+  </div>
+</div>
+
+<script>
+  const items = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.15 });
+    items.forEach(el=>io.observe(el));
+  } else {
+    items.forEach(el=>el.classList.add('in'));
+  }
+
+  document.querySelectorAll('.dossier-tab').forEach(tab=>{
+    tab.addEventListener('click',()=>{
+      document.querySelectorAll('.dossier-tab').forEach(t=>t.classList.remove('active'));
+      document.querySelectorAll('.tab-body').forEach(b=>b.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById(tab.dataset.tab).classList.add('active');
+    });
+  });
+
+  document.querySelectorAll('.test-toggle').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      btn.closest('.test-card').classList.toggle('open');
+    });
+  });
+
+  const burger=document.getElementById('burger');
+  const mobileMenu=document.getElementById('mobileMenu');
+  burger.addEventListener('click',()=>{
+    burger.classList.toggle('active');
+    mobileMenu.classList.toggle('open');
+    document.body.style.overflow=mobileMenu.classList.contains('open')?'hidden':'';
+  });
+  mobileMenu.querySelectorAll('a').forEach(a=>{
+    a.addEventListener('click',()=>{
+      burger.classList.remove('active');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow='';
+    });
+  });
+  const heroBtn=document.querySelector('.hero-cta .btn-primary');
+  const contactPhone=document.querySelector('.contact-phone-link');
+  const modal=document.getElementById('consultModal');
+  const modalClose=document.getElementById('modalClose');
+  if(window.innerWidth<=980){
+    if(heroBtn) heroBtn.href='tel:+79992182809';
+  } else {
+    if(heroBtn){
+      heroBtn.addEventListener('click',e=>{
+        e.preventDefault();
+        modal.classList.add('open');
+      });
+    }
+    if(contactPhone) contactPhone.addEventListener('click',e=>e.preventDefault());
+  }
+  if(modalClose) modalClose.addEventListener('click',()=>modal.classList.remove('open'));
+  if(modal) modal.addEventListener('click',e=>{ if(e.target===modal) modal.classList.remove('open'); });
+</script>
+
+</body>
+</html>
